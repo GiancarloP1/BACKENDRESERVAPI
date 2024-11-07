@@ -1,0 +1,14 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar el archivo de configuración de entorno
+.env
+
+# Ignorar logs
+logs
+*.log
+npm-debug.log*
+
+# Ignorar archivos de sistema
+.DS_Store
+Thumbs.db
