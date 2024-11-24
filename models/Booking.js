@@ -5,8 +5,11 @@ const bookingSchema = new mongoose.Schema({
     hotelName: { type: String, required: true },
     checkInDate: { type: Date, required: true },
     checkOutDate: { type: Date, required: true },
-    roomType: { type: String, required: true }, // Ejemplo: "single", "double", etc.
+    roomType: { type: String, required: true },
+    paid: { type: Boolean, default: false }
 });
 
-const Booking = mongoose.model('Booking', bookingSchema);
+
+const Booking = mongoose.models.Booking || mongoose.model('Booking', bookingSchema);
+
 export default Booking;

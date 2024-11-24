@@ -21,7 +21,7 @@ export const login = async (req, res) => {
         }
         const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-        // Enviar el token como parte del cuerpo JSON
+        // Envia el token como parte del cuerpo JSON
         res.json({ message: 'Login successful', token });
     } catch (error) {
         res.status(500).json({ error: 'Error logging in' });

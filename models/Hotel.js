@@ -6,8 +6,12 @@ const hotelSchema = new mongoose.Schema({
     description: { type: String, required: true },
     amenities: [String],
     pricePerNight: { type: Number, required: true },
-    availableRooms: { type: Number, required: true } 
+    availableRooms: { type: Number, required: true }
 });
 
-const Hotel = mongoose.model('Hotel', hotelSchema);
+
+const Hotel = mongoose.models.Hotel || mongoose.model('Hotel', hotelSchema);
+
 export default Hotel;
+
+
